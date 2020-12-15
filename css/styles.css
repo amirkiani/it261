@@ -1,0 +1,135 @@
+/*Styles for my Classwork Website*/
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    background:#ddd;
+}
+.orange {
+    background:orange;
+    }
+
+
+.inner {
+    background: yellow;
+}
+
+/*I will be using background colors, heights, widths and floats for my container - no content yet */
+
+header {
+    background: grey;
+    
+}
+
+
+
+.row {
+    max-width:1100px;
+    margin:0 auto;
+}
+
+
+nav {
+    height:50px;
+    line-height: 50px;
+    background:red;
+    
+}
+
+nav ul {
+    width:1200px;
+    margin:0 auto;
+}
+
+nav li {
+        float: left;
+        list-style-type: none;
+        text-align: center;
+        width: 12.50% /* 100 / 6 buttons */
+    }
+
+    
+nav a {
+        color: white;
+        text-decoration: none;
+
+}
+
+nav a:hover {
+    background: #666;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    
+}
+
+main {
+    width:62%;
+    float: left;
+    height:400px;
+    
+}
+
+
+main img {
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 20px;
+}
+
+aside {
+    width:35%;
+    float: right;
+    height:300px;
+    background:grey;
+}
+
+aside ul {
+    padding: 10px;
+}
+
+#me {
+    width: 190px;
+    margin: auto;
+    display: block;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+  }
+
+.copyright {
+    height:50px;
+    line-height: 50px;
+    background: orange;
+    
+    
+}
+
+.copyright li {
+    float: left;
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+h1, h2, p {
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 30px;
+}
