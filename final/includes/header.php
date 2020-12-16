@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <title><?php echo $title ;    ?></title>
 <link href="css/styles.css" type="text/css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
 
 </head>
 <body class="<?php echo $body ; ?>">

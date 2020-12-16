@@ -16,7 +16,7 @@
 }
 
 .login {
-    background: white;
+    background: #D3D3D3;
 }
 
 .about {
@@ -43,11 +43,20 @@ header {
 }
 
 #logo {
-    width: 150px;
+    width: 300px;
     float: left;
 }
 
+#welcome {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+blockquote {
+    color:#46e6dd;
+    font-family: 'Anton', sans-serif;
+}
     
 
 nav ul {
@@ -59,18 +68,21 @@ nav li {
     float: left;
     margin-left: 15px;
     list-style-type: none;
+
 }
 
 nav a {
     color: #46e6dd;
     text-decoration: none;
+    font-family: 'Monoton', cursive;
+
 }
 
 #wrapper {
     clear: both;
     width: 940px;
     margin: 0 auto;
-    color: #46e6dd;
+    color: black;
 }
 
 main {
@@ -93,7 +105,7 @@ footer {
     height: 50px;
     line-height: 50px;
     border-top: 1px dotted tan;
-    color:#46e6dd;
+    color:red;
     clear: both;
 }
 
@@ -123,11 +135,12 @@ h1 {
     font-size: 2em;
     font-weight: 200;
     margin-bottom: 9px;
-    color:#46e6dd;
+    color:#00008b;
+    font-family: 'Anton', sans-serif;
 }
 
 p {
-    color:#46e6dd;
+    color:black;
 }
 
 table {
@@ -173,7 +186,7 @@ textarea{
     }
 
 fieldset {
-    color:#46e6dd;
+    color: black;
     padding: 10px 15px 10px 10px;
 }
 
@@ -231,7 +244,7 @@ textarea{
     }
 
 fieldset {
-    color:#46e6dd;
+    color:black;
     padding: 10px 15px 10px 10px;
 }
 

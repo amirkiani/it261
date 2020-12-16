@@ -37,7 +37,7 @@ echo '<img src="'.$selectedImages.'">';
 Welcome to TV Planet! We know 2020 was rough for everyone. So we are showing you the very best TV shows of 2020 so you can take your mind off and relax. Our critics watched all the top shows of 2020 and listed them for you. So you don't have to waste your time watching duds! 
 
 </blockquote>
-<h2 class="center"><a href="https://github.com/amirkiani/IT-261-WebAppProgramming">My GitHub Page for randImages Function & config.php</a></h2>
+
   
 <?php
 include('includes/footer.php');

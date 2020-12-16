@@ -16,8 +16,8 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 
     switch(THIS_PAGE) {
         case  'index.php' : 
-        $title = 'Homepage for our new website';
-        $mainHeadLine = 'Welcome to TV Planet';
+        $title = 'TV Planet';
+        //$mainHeadLine = 'TV Planet';
         $center = 'center';
         $body = 'home';
         $htmlValidator ="http://ameercodes.com/it261/final/index.php";
@@ -26,7 +26,7 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 
         case  'login.php' : 
             $title = 'Login for TV Planet';
-            $mainHeadLine = 'Please login for member\'s access';
+            $mainHeadLine = 'Member\'s Login Portal';
             $center = 'center';
             $body = 'login';
             $htmlValidator ="http://ameercodes.com/it261/final/login.php";
@@ -61,7 +61,7 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
             break;
 
         case  'thx.php' : 
-            $title = 'Our thahnk you page';
+            $title = 'Our thank you page';
             $mainHeadLine = 'Thank you for filling out our form!';
             // $center = 'center';
             $body = 'contact inner';
