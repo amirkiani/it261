@@ -12,34 +12,53 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 switch(THIS_PAGE) {
 case 'login.php' :
 $body = 'login';
-$title = 'Best TV Shows of 2020 Login Page!'
+$mainHeadline = 'Welcome back! Please log in';
+$center = 'login';
+$title = 'Best TV Shows of 2020 Login Page!';
 break;
 
 case 'register.php' :
 $body = 'register';
-$title = 'Best TV Shows of 2020 Register Page!'
+$mainHeadline = 'Complete your registration';
+$center = 'register';
+$title = 'Register Page';
 break;
 
 case 'index.php' :
 $body = 'home';
-$title = 'Best TV Shows of 2020 Home Page!'
+$mainHeadline = 'Welcome to the Best TV Shows of 2020!';
+$center = 'center';
+$title = 'Best TV Shows of 2020 Home Page';
 break;
 
 
 case 'about.php' :
 $body = 'about';
-$title = 'Best TV Shows of 2020 About Page!'
+$mainHeadline = 'Here are the MySQL tables';
+$center = 'center';
+$title = 'About Page';
 break;
 
 case 'daily.php' :
 $body = 'daily';
-$title = 'Best TV Shows of 2020 Daily Page!'
+$mainHeadline = 'Here is the TV Show of the Day';
+$center = 'center';
+$title = 'Daily Page';
 break;
 
 case 'shows.php' :
 $body = 'shows';
-$title = 'Best TV Shows of 2020 Login Page!'
+$mainHeadline = 'Here are the top TV shows for 2020!';
+$center = 'center';
+$title = 'Top TV Shows';
 break;
+
+// case 'contact.php' :
+// $body = 'contact';
+// $mainHeadline = 'Please contact us and provide us feedback';
+// $center = 'center'
+// $title = 'Contact page';
+// break;
 
 }
 
@@ -64,7 +83,16 @@ function makeLinks($nav) {
         return $myReturn;
 }
 
-// INSERT php for form
+// daily switch
+date_default_timezone_set('America/Los_Angeles'); 
+$today=''; 
+
+
+if(isset($_GET['month'])){ 
+    $season=$_GET['month'];
+}else { 
+    $season=date('m'); 
+}
 
 
 

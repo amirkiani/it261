@@ -1,7 +1,7 @@
 <?php // server page!!!
 
 session_start();
-include('config.php');
+include('includes/config.php');
 
 // initialize the variables
 
@@ -114,7 +114,7 @@ if(isset($_POST['login_user'])) {
 
         if(mysqli_num_rows($results) == 1) {
             $_SESSION['UserName'] = $UserName;
-            $_SESSION['success'] = $success;
+            $_SESSION['successs'] = $success;
 
 header('Location: index.php') ;
 

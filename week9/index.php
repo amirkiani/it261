@@ -14,8 +14,10 @@ if(isset($_GET['logout'])) {
     unset($_SESSION['UserName']);
     header('Location: login.php');
 }
-
+// start includes here
+include('includes/config.php');
 include('includes/header.php');
+
 ?>
 <h1>Welcome to our home page!</h1>
 
