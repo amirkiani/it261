@@ -68,20 +68,8 @@ break;
 
 ?>
 
-<!doctype html>
-<html lang="en">
-<head>
 <meta charset="UTF-8">
 <title>Switch page</title>
-<style> 
-body {
-    background-color: coral;
-}
-</style>
-
-</head>
-
-<body class="<?php echo $background; ?>">
 <h1><?php echo $hookah; ?></h1>
 <main>
 <p>Please click below to see the Hookah flavor of the day</p>
@@ -99,8 +87,6 @@ body {
 
 <img src="images/<?php echo $pic;?>" alt="<?php echo $alt;?>">
 
-</body>
-</html>
 <?php
 include('includes/footer.php');
 ?>

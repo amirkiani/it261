@@ -96,7 +96,7 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
     $nav['daily.php'] = "Daily";
     $nav['shows.php'] = "Shows";
     $nav['contact.php'] = "Contact";
-    $nav['gallery.php'] = "Gallery";
+    //$nav['gallery.php'] = "Gallery";
 
     function makeLinks($nav) {
     $myReturn = '';
@@ -127,28 +127,7 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
         return '<img src="'.$selectedImages.'">';
     }
 
-    // randImages function for Candidates
-
-        $candidates[0] = 'trump';
-        $candidates[1] = 'biden';
-        $candidates[2] = 'clint';
-        $candidates[3] = 'sande';
-        $candidates[4] = 'warre';
-        $candidates[5] = 'harri';
-        $candidates[6] = 'booke';
-        $candidates[7] = 'ayang';
-        $candidates[8] = 'butti';
-        $candidates[9] = 'klobu';
-        $candidates[10] = 'castr';
-
-        function randImages2($candidates) {
-            $i = rand(0, count($candidates)-1);
-            $selectedImages = 'images/' .$candidates[$i]. '.jpg';
-            return '<img src="'.$selectedImages.'">';
-        }
-
-
-
+   
 
     // this is the php for my form
 

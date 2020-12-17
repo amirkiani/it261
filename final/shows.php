@@ -17,7 +17,38 @@ include('includes/config.php');
 include('includes/header.php');
 
 ?>
+<?php
+    if(isset($_SESSION['UserName'])) : ?>
+    <div class="welcome-logout">
+    <h3> Welcome, 
+        
+    <?php echo $_SESSION['UserName']; ?>
 
+    </h3>
+    
+    <a href="index.php?logout='1'">Log out!</a>
+    </div>
+
+    <?php endif ?>
+    <div id="wrapper">
+    <h1>Click on the Shows for More Information</h1>   
+
+    <aside>
+    <h1>Streaming Services</h1>
+        <p>To the left are the top 5 shows according to our staff critics. For more information on each streaming service, click on their logo for more information.</p>
+        <a href="http://www.netflix.com">
+  <img src="images/netflix.png" alt="netflix" height="128" width="128" />
+</a> 
+<a href="http://www.hulu.com">
+  <img src="images/hulu.png" alt="hulu" height="128" width="128" />
+</a> 
+<a href="http://www.disneyplus.com">
+  <img src="images/disney.png" alt="disney" height="128" width="128" />
+</a> 
+
+
+
+    </aside>
 <?php
 $sql = 'SELECT * FROM Shows';
 

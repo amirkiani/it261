@@ -18,5 +18,5 @@
         </div><!--end copyright-->
     </footer>
     
-</body>
+
 </html>

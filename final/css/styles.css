@@ -35,6 +35,18 @@
     background: #D3D3D3;
 }
 
+.register {
+    background: black;
+}
+
+.shows {
+    background: black;
+}
+
+li {
+    color: #DC143C;
+}
+
 .center {
     text-align: center;
 }
@@ -150,7 +162,7 @@ h1 {
 }
 
 p {
-    color:black;
+    color: white;
 }
 
 table {
