@@ -4,11 +4,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Anton', sans-serif; 
 
 }
 
 .active {
-    color: red;
+    color: 	#DC143C;
 }
 
 .home {
@@ -17,14 +18,21 @@
 
 .login {
     background: #D3D3D3;
+    font-family: 'Anton', sans-serif; 
 }
 
 .about {
-    background:lightgray;
+    background: black;
+    font-family: 'Anton', sans-serif; 
+
 }
 
 .contact {
     background: beige;
+}
+
+.register {
+    background: #D3D3D3;
 }
 
 .center {
@@ -47,10 +55,12 @@ header {
     float: left;
 }
 
-#welcome {
+.image {
     display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 blockquote {
@@ -105,7 +115,7 @@ footer {
     height: 50px;
     line-height: 50px;
     border-top: 1px dotted tan;
-    color:red;
+    color:	#DC143C;
     clear: both;
 }
 
@@ -135,7 +145,7 @@ h1 {
     font-size: 2em;
     font-weight: 200;
     margin-bottom: 9px;
-    color:#00008b;
+    color: white;
     font-family: 'Anton', sans-serif;
 }
 
@@ -213,10 +223,46 @@ list-style-type: none;
 
 span {
 display: block;
-color: red;
+color: 	#DC143C;
 font-style: italic;
 }
 
+.success {
+    width: 15%;
+    height: 90px;
+    color: 	#DC143C;
+    background:#46e6dd;
+    border: 1px solid white;
+    border-radius: 20px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow:#DC143C;
+    float: right;
+    margin-right: 20px;
+  }
+
+.welcome-logout {
+    /* display: inline-block; */
+    width: 15%;
+    height: 90px;
+    color: 	#DC143C;
+    background:#46e6dd;
+    border: 1px solid white;
+    border-radius: 20px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow:#DC143C;
+    float: right;
+    margin-right: 20px;
+  }
 
 /* Form css */
 
@@ -271,6 +317,6 @@ list-style-type: none;
 
 span {
 display: block;
-color: red;
+color: 	#DC143C;
 font-style: italic;
 }

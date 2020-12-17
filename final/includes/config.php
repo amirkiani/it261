@@ -34,8 +34,8 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
             break;
 
         case  'about.php' : 
-            $title = 'About page for our new website';
-            $mainHeadLine = 'Welcome to our wonderful about page';
+            $title = 'About Page';
+            // $mainHeadLine = 'Welcome to our wonderful about page';
             $center = 'center';
             $body = 'about inner';
             break;
@@ -82,6 +82,13 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
             $body = 'shows';
             break;
 
+        case  'register.php' : 
+            $title = 'Registration page';
+            $mainHeadLine = 'Welcome to the Top Shows page';
+            $center = 'center';
+            $body = 'register';
+            break;
+
     } // end switch
 
     $nav['index.php'] = "Home";
@@ -95,7 +102,7 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
     $myReturn = '';
     foreach($nav as $key => $value) {
     if(THIS_PAGE == $key) {
-    $myReturn .= '<li><a href="'.$key.' "class="active">'.$value.'</a></li>';
+    $myReturn .= '<li><a href="'.$key.'" class="active">'.$value.'</a></li>';
 
     } else {
         $myReturn .= '<li><a href="'.$key.' "> '.$value.'</a></li>';

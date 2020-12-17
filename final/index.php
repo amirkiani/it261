@@ -17,10 +17,37 @@ include('includes/header.php');
 
 ?>
 
+<?php
+// Notification message
+if(isset($_SESSION['success'])) :?>
+<div class="success">
+<h3>
+    <?php
+    echo $_SESSION['success'];
+    unset($_SESSION['success']);
+?>
+</h3>
+</div>
+<?php endif ?>
+
+
+
+<?php
+    if(isset($_SESSION['UserName'])) : ?>
+    <div class="welcome-logout">
+    <h3> Welcome, 
+        
+    <?php echo $_SESSION['UserName']; ?>
+    <br> You are now logged in!
+    </h3>
+    <p><a href="index.php?logout='1'">Log out!</a></p>
+    </div>
+
+    <?php endif ?>
 
 <div id="wrapper">
     <h1 class="<?php echo $center ;    ?>"><?php echo $mainHeadLine;  ?></h1>
-    <img id="welcome" src="images/welcome.png" alt="welcome">
+    <img class="image" src="images/welcome.png" alt="welcome">
 
 <?php $photos[0] = 'photo1';
 $photos[1] = 'photo2';

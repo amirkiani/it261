@@ -23,10 +23,10 @@ if(isset($_GET['id'])) {
     $id = (int)$_GET['id'];
 
 } else {
-    header('location:ps5.php');
+    header('location:shows.php');
 }
 
-$sql = 'SELECT * FROM PS5 WHERE GameID = '.$id.'';
+$sql = 'SELECT * FROM Shows WHERE ShowID = '.$id.'';
 
 $iConn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die(myerror(__FILE__,__LINE__,mysqli_connect_error()));
 // we extract the data here
@@ -39,11 +39,10 @@ if(mysqli_num_rows($result) > 0 ) { // show the records
     while($row = mysqli_fetch_assoc($result)) {
     // this array will display the contents of your row
     echo '<ul>'; // use a similar a href's value as we used for switch assignment
-    echo '<li class="bold"><h2>'.$row['GameName'].'</h2></li>';
+    echo '<li class="bold"><h2>'.$row['ShowName'].'</h2></li>';
     echo '<li>'.$row['ReleaseDate'].'</li>';
-    echo '<li>'.$row['Console'].'</li>';
+    echo '<li>'.$row['StreamingService'].'</li>';
     echo '<li>'.$row['Description'].'</li>';
-
     echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['Image'] ).'"/>';
 
         echo '</ul>';

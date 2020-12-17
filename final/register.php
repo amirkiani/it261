@@ -5,7 +5,8 @@ include('includes/header.php')
 
 
 ?>
-<h1>Register today! </h1>
+<!-- <h1>Register today! </h1> -->
+
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 <fieldset>
 
