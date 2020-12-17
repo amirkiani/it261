@@ -5,7 +5,8 @@ include('includes/header.php')
 
 
 ?>
-<!-- <h1>Register today! </h1> -->
+<div class="wrapper">
+<h1 class="<?php echo $center ;    ?>"><?php echo $mainHeadLine;  ?></h1>
 
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 <fieldset>
@@ -39,3 +40,7 @@ include('includes/errors.php');
 </form>
 
 <p class="center">Already a member? <a href="login.php">Please sign in</a></p>
+
+<?php
+include('includes/footer.php');
+?>
