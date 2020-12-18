@@ -5,7 +5,7 @@ include('includes/header.php')
 
 
 ?>
-<div class="wrapper">
+<div id="wrapper">
 <h1 class="<?php echo $center ;    ?>"><?php echo $mainHeadLine;  ?></h1>
 
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">

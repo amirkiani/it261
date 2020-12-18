@@ -39,19 +39,19 @@ include('includes/header.php');
 
 ?>
 
-
+<div id="wrapper">
 <h1>Streamer of the Day</h1>
 <main>
 <p>Please click below to see the Streamer of the day</p>
 <p><?php echo $content; ?></p>
 <ul>
-<li><a href="switch.php?today=Sunday">Sunday</a></li>
-<li><a href="switch.php?today=Monday">Monday</a></li>
-<li><a href="switch.php?today=Tuesday">Tuesday</a></li>
-<li><a href="switch.php?today=Wednesday">Wednesday</a></li>
-<li><a href="switch.php?today=Thursday">Thursday</a></li>
-<li><a href="switch.php?today=Friday">Friday</a></li>
-<li><a href="switch.php?today=Saturday">Saturday</a></li>
+<li><a href="daily.php?today=Sunday">Sunday</a></li>
+<li><a href="daily.php?today=Monday">Monday</a></li>
+<li><a href="daily.php?today=Tuesday">Tuesday</a></li>
+<li><a href="daily.php?today=Wednesday">Wednesday</a></li>
+<li><a href="daily.php?today=Thursday">Thursday</a></li>
+<li><a href="daily.php?today=Friday">Friday</a></li>
+<li><a href="daily.php?today=Saturday">Saturday</a></li>
 
 </ul>
 

@@ -31,25 +31,9 @@ include('includes/header.php');
 
     <?php endif ?>
     <div id="wrapper">
+    <main>
     <h1>Click on the Shows for More Information</h1>   
-
-    <aside>
-    <h1>Streaming Services</h1>
-        <p>To the left are the top 5 shows according to our staff critics. For more information on each streaming service, click on their logo for more information.</p>
-        <a href="http://www.netflix.com">
-  <img src="images/netflix.png" alt="netflix" height="128" width="128" />
-</a> 
-<a href="http://www.hulu.com">
-  <img src="images/hulu.png" alt="hulu" height="128" width="128" />
-</a> 
-<a href="http://www.disneyplus.com">
-  <img src="images/disney.png" alt="disney" height="128" width="128" />
-</a> 
-
-
-
-    </aside>
-<?php
+    <?php
 $sql = 'SELECT * FROM Shows';
 
 $iConn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die(myerror(__FILE__,__LINE__,mysqli_connect_error()));
@@ -87,6 +71,25 @@ if(mysqli_num_rows($result) > 0 ) { // show the records
 
 @mysqli_close($iConn);
 ?>
+
+
+        </main>
+    <aside>
+    <h1>Streaming Services</h1>
+        <p>To the left are the top 5 shows according to our staff critics. For more information on each streaming service, click on their logo for more information.</p>
+        <a href="http://www.netflix.com">
+  <img src="images/netflix.png" alt="netflix" height="128" width="128" />
+</a> 
+<a href="http://www.hulu.com">
+  <img src="images/hulu.png" alt="hulu" height="128" width="128" />
+</a> 
+<a href="http://www.disneyplus.com">
+  <img src="images/disney.png" alt="disney" height="128" width="128" />
+</a> 
+
+
+
+    </aside>
 
 
 <?php

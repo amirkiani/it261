@@ -201,7 +201,17 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
         } else {
             $comments = $_POST['comments'];
         }
-
+        if(empty($_POST['tel'])) {  // if empty, type in your number
+            $telError = 'Your phone number please!';
+            } elseif(array_key_exists('tel', $_POST)){
+            if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['tel']))
+            { // if you are not typing the requested format of xxx-xxx-xxxx, display Invalid format
+            $telError = 'Invalid format!';
+            } else{
+            $tel = $_POST['tel'];
+            }
+            }
+            
         // if(empty($_POST['telephone'])) {
         //     $telError = 'Please enter your telephone';
         // } else {
@@ -226,16 +236,7 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
     } // end function 
 
 
-    if(empty($_POST['tel'])) {  // if empty, type in your number
-        $telError = 'Your phone number please!';
-        } elseif(array_key_exists('tel', $_POST)){
-        if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['tel']))
-        { // if you are not typing the requested format of xxx-xxx-xxxx, display Invalid format
-        $telError = 'Invalid format!';
-        } else{
-        $tel = $_POST['tel'];
-        }
-        }
+    
 
 
         if(isset($_POST['firstName'],
