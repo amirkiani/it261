@@ -40,9 +40,16 @@ include('includes/header.php');
 ?>
 
 <div id="wrapper">
+<main>
 <h1>Streamer of the Day</h1>
-<p>Please click below to see the Streamer of the day</p>
+
 <p><?php echo $content; ?></p>
+<img src="images/<?php echo $pic;?>" alt="<?php echo $alt;?>">
+    </main>
+
+<aside>
+    <h1>Other Streamers of the Day</h1>
+        
 <ul>
 <li><a href="daily.php?today=Sunday">Sunday</a></li>
 <li><a href="daily.php?today=Monday">Monday</a></li>
@@ -53,8 +60,7 @@ include('includes/header.php');
 <li><a href="daily.php?today=Saturday">Saturday</a></li>
 
 </ul>
-
-<img src="images/<?php echo $pic;?>" alt="<?php echo $alt;?>">
+</aside>
 
 <?php
 include('includes/footer.php');
