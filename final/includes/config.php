@@ -81,6 +81,13 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
             $center = 'center';
             $body = 'shows';
             break;
+        
+        case  'shows-view.php' : 
+            $title = 'More about the show!';
+            $mainHeadLine = 'Information about your show';
+            $center = 'center';
+            $body = 'shows-view';
+            break;
 
         case  'register.php' : 
             $title = 'Registration page';
@@ -136,7 +143,7 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
     $email = '';
     $phone = '';
     // $gender = '';
-    $dcOrMarvel = '';
+    $show = '';
     $dc = '';
     $marvel = '';
     $privacy = '';
@@ -148,7 +155,7 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
     $emailError = '';
     $phoneError = '';
     // $genderError = '';
-    $dcOrMarvelError = '';
+    $showError = '';
     $privacyError = '';
     $commentsError = '';
     $telError = '';
@@ -176,25 +183,28 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
             $email = $_POST['email'];
         }
 
-        if(empty($_POST['dcOrMarvel'])) {
-            $dcOrMarvelError = 'Please check one!';
+        if(empty($_POST['show'])) {
+            $showError = 'Please check one!';
         } else {
-            $dcOrMarvel = $_POST['dcOrMarvel'];
+            $show = $_POST['show'];
         }
         
-        if($dcOrMarvel == 'DC') {
-            $dc = 'checked';
+        if($show == 'Mandalorian') {
+            $mandalorian = 'checked';
 
-        }elseif($dcOrMarvel == 'Marvel') {
-            $marvel= 'checked';
+        }elseif($show == 'Normal People') {
+            $show = 'checked';
+
+        }elseif($show == 'High Fidelity') {
+            $show = 'checked';
 
         }
 
         
-        if(empty($_POST['dcOrMarvel'])) {
-            $dcOrMarvelError = 'Choose between DC and Marvel!';
+        if(empty($_POST['show'])) {
+            $showError = 'Choose your favorite show!';
         } else {
-            $dcOrMarvel = $_POST['dcOrMarvel'];
+            $show = $_POST['show'];
         }
         if(empty($_POST['comments'])) {
             $commentsError = 'Please include your comments!';
@@ -250,7 +260,7 @@ define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
             $body = ''.$firstName.' has filled out your form' .PHP_EOL.'';
             $body .= 'Email: '.$email.' '.PHP_EOL.'';
             $body .= 'Your Phone Number: '.$tel.' '.PHP_EOL.'';
-            $body .= 'Your Favorite: '.$dcOrMarvel.' '.PHP_EOL.'';
+            $body .= 'Your Favorite: '.$show.' '.PHP_EOL.'';
             $body .= 'Preferred media: '.myFavoriteMedia().' '.PHP_EOL.'';
             $body .= 'Agreed to Privacy: ' .$_POST['privacy'].' '.PHP_EOL.'';
             $body .= 'Comments:'.$comments.'';
@@ -294,12 +304,7 @@ else {
 }
 
 switch($today) {
-    case 'Friday' :
-        $hookah = 'Friday is Netflix Day';
-        $pic = 'netflix.png';
-        $alt = 'Netflix';
-        $content = 'Netflix is the number one streaming service with over 150 subscribers worldwide.';
-break;
+   
 case 'Saturday' :
     $hookah = 'Saturday is Blue Mist day';
     $pic = 'mist.jpg';
@@ -342,6 +347,13 @@ case 'Thursday' :
     $alt = 'Gummi';
     $background = 'white';
     $content = 'Fumari is one of the newer brands to be featured on this list but they are on the rise big-time. Smokers love Fumari for their delicious, unique, and authentic flavors as well as their innovative resealable packaging which keeps your flavors fresher for longer. White Gummi Bear is a pretty self explanatory flavor name. If you have ever eaten a White Gummi bear before, then you know what to expect. For those unfortunate enough to have never tried these little bite sized candies, expect a sweet and light pineapple candy flavor.';
+break;
+
+case 'Friday' :
+    $hookah = 'Friday is Netflix Day';
+    $pic = 'netflix.png';
+    $alt = 'Netflix';
+    $content = 'Netflix is the number one streaming service with over 150 subscribers worldwide.';
 break;
 }
 ?>

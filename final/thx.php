@@ -13,7 +13,7 @@ include('includes/header.php');
 </main>
 
 <aside>
-<h3>This is my aside</h3>
+<h3>Thank you for your feedback!</h3>
 </aside>
 
   

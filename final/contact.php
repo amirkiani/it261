@@ -36,6 +36,7 @@ include('includes/header.php');
 <main>
 
     <h1><?php echo $mainHeadLine;  ?></h1>
+
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 <fieldset>
 <label>First Name</label>
@@ -58,39 +59,42 @@ include('includes/header.php');
   if(isset($_POST['tel'])) echo htmlspecialchars($_POST['tel']) ; ?>">
   <span><?php echo $telError; ?></span>
 
-<label>Are you a DC or Marvel fan?</label>
+<label>Which top five show is your favorite?</label>
 
 <!-- logic = we are still asking if post currency was set  -->
 
 <ul>
 <li>
-<input type="radio" name="dcOrMarvel" value="DC"
-<?php if(isset($_POST['dcOrMarvel']) && $_POST['dcOrMarvel'] == 'DC') echo 'checked="checked"'; ?>
-    >DC Dude!!! </li>
-    <input type="radio" name="dcOrMarvel" value="Marvel"
-<?php if(isset($_POST['dcOrMarvel']) && $_POST['dcOrMarvel'] == 'Marvel') echo 'checked="checked"'; ?>
-    >Make Mine Marvel!! </li>
+<input type="radio" name="show" value="Mandalorian">
+<?php if(isset($_POST['show']) && $_POST['show'] == 'Mandalorian') echo 'checked="checked"'; ?>
+    <li>Mandalorian </li>
+    <input type="radio" name="show" value="Normal People">
+<?php if(isset($_POST['show']) && $_POST['show'] == 'Normal People') echo 'checked="checked"'; ?>
+    <li>Normal People </li>
+    <input type="radio" name="show" value="High Fidelity">
+<?php if(isset($_POST['show']) && $_POST['show'] == 'High Fidelity') echo 'checked="checked"'; ?>
+    <li>High Fidelity </li>
 
 
 </ul>
-<span><?php echo $dcOrMarvelError; ?></span>
+<span><?php echo $showError; ?></span>
 
-<label>Where do you watch your favorite heroes at?</label>
+<label>Which is your favorite streamer?</label>
 
 <ul>
 <li>
-<input type="checkbox" name="media[]" value="Movies"
-<?php if(isset($_POST['media']) && $_POST['media'] == 'Movies') echo 'checked="checked"'; ?>
-    >Movies </li>
-    <input type="checkbox" name="media[]" value="TV"
-<?php if(isset($_POST['media']) && $_POST['media'] == 'TV') echo 'checked="checked"'; ?>
-    >TV </li>
-    <input type="checkbox" name="media[]" value="Comics"
-<?php if(isset($_POST['media']) && $_POST['media'] == 'Comics') echo 'checked="checked"'; ?>
-    >Comics</li>
+<input type="radio" name="media[]" value="Netflix">
+<?php if(isset($_POST['media']) && $_POST['media'] == 'Netflix') echo 'checked="checked"'; ?>
+    <li>Netflix </li>
+    <input type="radio" name="media[]" value="Disney Plus">
+<?php if(isset($_POST['radio']) && $_POST['media'] == 'Disney Plus') echo 'checked="checked"'; ?>
+    <li>Disney Plus</li>
+    <input type="radio" name="media[]" value="Hulu">
+<?php if(isset($_POST['media']) && $_POST['media'] == 'Hulu') echo 'checked="checked"'; ?>
+    <li>Hulu</li>
 
 </ul>
-<span><?php echo $dcOrMarvelError; ?></span>
+<span><?php echo $showError; ?></span>
 
 <label>Comments</label>
 <textarea name="comments"> <?php if(isset($_POST['comments'])) echo htmlspecialchars($_POST['comments']) ; ?>

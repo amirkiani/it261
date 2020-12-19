@@ -19,13 +19,30 @@ include('includes/header.php');
 
 // WE ARE CONNECTING TO THE DATABASE!
 
-if(isset($_GET['id'])) {
+    if(isset($_SESSION['UserName'])) : ?>
+    <div class="welcome-logout">
+    <h3> Welcome, 
+        
+    <?php echo $_SESSION['UserName']; ?>
+
+    </h3>
+    
+    <a href="index.php?logout='1'">Log out!</a>
+    </div>
+
+    <?php endif ?>
+
+<?php if(isset($_GET['id'])) {
     $id = (int)$_GET['id'];
 
 } else {
     header('location:shows.php');
 }
-
+?> 
+<div id="wrapper">
+    <main>
+    <h1>More Info on the Show</h1>  
+<?php
 $sql = 'SELECT * FROM Shows WHERE ShowID = '.$id.'';
 
 $iConn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die(myerror(__FILE__,__LINE__,mysqli_connect_error()));
@@ -67,6 +84,6 @@ if(mysqli_num_rows($result) > 0 ) { // show the records
 </main>
 
 
-</aside>
+
 <?php
 include('includes/footer.php');

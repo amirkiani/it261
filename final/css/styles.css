@@ -28,7 +28,7 @@
 }
 
 .contact {
-    background: white;
+    background: #D3D3D3;
 }
 
 .register {
@@ -36,6 +36,10 @@
 }
 
 .shows {
+    background: black;
+}
+
+.shows-view {
     background: black;
 }
 
@@ -49,6 +53,7 @@ li {
 
 .center {
     text-align: center;
+    color: 	#00008B;
 }
 
 header {
@@ -219,6 +224,7 @@ fieldset {
 label {
     display: block;
     margin-bottom: 5px;
+    color: 	#00008B;
 }
 
 .box {

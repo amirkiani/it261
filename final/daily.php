@@ -41,7 +41,6 @@ include('includes/header.php');
 
 <div id="wrapper">
 <h1>Streamer of the Day</h1>
-<main>
 <p>Please click below to see the Streamer of the day</p>
 <p><?php echo $content; ?></p>
 <ul>
@@ -57,9 +56,7 @@ include('includes/header.php');
 
 <img src="images/<?php echo $pic;?>" alt="<?php echo $alt;?>">
 
-</body>
-</html>
 <?php
 include('includes/footer.php');
 ?>
-    <div id="wrapper">
+    
